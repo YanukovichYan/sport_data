@@ -1,0 +1,33 @@
+.main-events {
+    display: flex;
+    background: #01b3b3;
+    border-radius: 0 0 7px 7px;
+    margin-bottom: 2px;
+}
+
+.events-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    color: #fff;
+    width: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.events-title:nth-child(1) {
+    width: 80px;
+}
+
+.events-title:nth-child(2) {
+    flex-grow: 1;
+    justify-content: left;
+}
+
+.events-title:nth-child(6) {
+    width: 60px;
+}

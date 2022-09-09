@@ -1,0 +1,146 @@
+.betCount {
+    background: #fff;
+    border-radius: 7px;
+    padding: 23px 23px 26px;
+}
+
+.bets {
+    display: flex;
+}
+
+.col1,
+.col2 {
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #193b52;
+    margin-right: 3px;
+    width: 50%;
+    padding: 7px 0;
+    max-height: 48px;
+}
+
+.col1 {
+    background: #ecf2f5;
+}
+
+.col2 {
+    background: #f7ebe1;
+}
+
+.betTitle {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: #a3b8c2;
+    text-transform: uppercase;
+}
+
+.numberOfBets {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 39px;
+    font-weight: 600;
+    font-size: .75rem;
+    border-bottom: 1px solid #ecf2f5;
+}
+
+.numberLeft {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #193b52;
+    text-transform: capitalize;
+}
+
+.numberLeft svg {
+    width: 15px;
+    margin-right: 7px;
+}
+
+.countBets,
+.payoutSum {
+    font-weight: bold;
+    padding-right: 14px;
+}
+
+.totalStake {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 39px;
+    font-weight: 600;
+    font-size: .75rem;
+    border-bottom: 1px solid #ecf2f5;
+}
+
+.totalLeft {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #193b52;
+    text-transform: capitalize;
+}
+
+
+.totalLeft svg {
+    width: 15px;
+    margin-right: 7px;
+}
+
+.inputBets {
+    width: 70px;
+    background: #ecf2f5;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #01b3b3;
+    height: 39px;
+    padding-right: 14px;
+    border: 0;
+    outline: none;
+}
+
+.inputBets::-webkit-outer-spin-button,
+.inputBets::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inputBets::placeholder {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #01b3b3;
+}
+
+.payout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 39px;
+    font-weight: 600;
+    font-size: .75rem;
+    border-bottom: 1px solid #ecf2f5;
+}
+
+.payoutLeft {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #193b52;
+    text-transform: capitalize;
+}
+
+.payoutLeft svg {
+    width: 15px;
+    margin-right: 7px;
+}

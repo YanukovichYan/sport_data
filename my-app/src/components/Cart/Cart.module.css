@@ -1,0 +1,86 @@
+.outcome {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 7px;
+    margin-bottom: 2px;
+}
+
+.left {
+    padding: 10px 13px 21px 10px;
+    position: relative;
+    width: 100%;
+}
+
+.left:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background: #e1d18c;
+    border-radius: 0 0 0 7px;
+}
+
+.number {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: #778f9e;
+}
+.participant {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #193b52;
+    margin-bottom: 9px;
+    padding-left: 12px;
+}
+
+.bottomCart {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12px;
+}
+
+.results {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #a3b8c2;
+    margin-bottom: 2px;
+}
+
+.win {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #a47353;
+    width: 158px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.odd {
+    background: #ecf2f5;
+    border-radius: 5px;
+    padding: 5px 11px;
+    max-width: 51px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #142e3f;
+    margin-top: 9px;
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 7px;
+    border-left: 1px solid #eaf0f3;
+    cursor: pointer;
+}
