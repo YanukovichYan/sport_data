@@ -1,0 +1,47 @@
+.league {
+    background: #f4fbfe;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #142e3f;
+    padding: 9px 9px 9px 15px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.league-amount {
+    margin-left: 7px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #a3b8c2;
+}
+
+.league-checkbox {
+    position: absolute;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.league-checkbox-made {
+    border: 1px solid #a5b9c7;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    background-position: 2px 3px;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    transition: all .2s;
+}
+
+.league-checkbox-made:hover {
+    border-color: #56a7f3;
+}
+
+.league-checkbox:checked~.league-checkbox-made {
+    background-image: url('https://img1.freepng.ru/20180208/lew/kisspng-check-mark-x-mark-clip-art-check-marks-5a7c0970394fe9.8780805115180783202348.jpg');
+}
