@@ -1,7 +1,10 @@
-import Container from "./components/Container/Container";
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {addEvents} from "./redux/eventsSlice";
+import "./App.css";
+import SidebarHeader from "./components/sidebar/SidebarHeader/SidebarHeader";
+import BetContainer from "./components/betCart/BetContainer/BetContainer";
+import Main from "./components/main/Main/Main";
 
 const ws = new WebSocket(
     "wss://srv.kralbet.com/sport/?EIO=3&transport=websocket"
@@ -28,17 +31,17 @@ function App() {
                 dispatch(addEvents(data.events))
             }
             // if (data.digest_type === "diff") {
-            //     // dispatch()
             // }
             // console.log(data)
-
         }
     };
     }, []);
 
     return (
-        <div>
-            <Container/>
+        <div className="container">
+            <SidebarHeader/>
+            <Main/>
+            <BetContainer/>
         </div>
     );
 }
