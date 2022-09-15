@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Sport from "../Sport/Sport";
 import classes from "./SidebarHeader.module.css";
 import {useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 const betting = [
     {
@@ -308,6 +309,7 @@ const betting = [
 ];
 
 const SidebarHeader = () => {
+
 
     const [eventBySport, setEventBySport] = useState([])
     const events = useSelector((state) => state.sports.events)

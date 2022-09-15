@@ -50,11 +50,20 @@
     border-radius: 6px;
     height: 32px;
     margin-right: 9px;
-    cursor: not-allowed;
+    cursor: pointer;
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
     color: #fff;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+.other:hover {
+    background: #fff;
+    color: #142e3f;
+    border: 1px solid #142e3f;
 }
 
 .outcome .active {

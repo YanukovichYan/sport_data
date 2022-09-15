@@ -43,5 +43,8 @@
 }
 
 .league-checkbox:checked~.league-checkbox-made {
-    background-image: url('https://img1.freepng.ru/20180208/lew/kisspng-check-mark-x-mark-clip-art-check-marks-5a7c0970394fe9.8780805115180783202348.jpg');
+    background-image: url('https://kralbet286.com/build/stylesSrc/themes/web/turkish/kralbet/img/sport_index/icons/white-check.svg');
+}
+.link {
+    text-decoration: none;
 }

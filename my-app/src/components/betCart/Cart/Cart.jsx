@@ -26,8 +26,8 @@ const Cart = () => {
                         <div className={classes.participant}>{item.participants}</div>
                         <div className={classes.bottomCart}>
                             <div>
-                                <div className={classes.results}>Match Odds</div>
-                                <div className={classes.win}>Wager: {item[item.outcomesType]}</div>
+                                <div className={classes.results}>{item.coeffTitle}</div>
+                                <div className={classes.win}>Wager: {item[item.outcomesType]} {item.name}</div>
                             </div>
                             <div className={classes.odd}>{item.coeff}</div>
                         </div>

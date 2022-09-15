@@ -13,6 +13,7 @@ const ButtonCoeff = ({item}) => {
     return (<>
             {market && Object.keys(market.outcomes).map((outcomeItem, index) => {
                 const outcome = market.outcomes[outcomeItem];
+
                 return (
                     <div key={index} className={classes.outcome}>
                         <Coefficient

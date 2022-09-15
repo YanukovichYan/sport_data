@@ -52,3 +52,4 @@ const Sport = ({sport, amount, eventsBySport}) => {
 }
 
 export default Sport;
+

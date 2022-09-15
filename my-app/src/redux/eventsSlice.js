@@ -4,7 +4,8 @@ import {parseGroupMarkets} from '../parseStringCoeff/parseStringCoeff'
 const initialState = {
     events: [],
     arrayCheckbox: [],
-    cart: []
+    cart: [],
+    selectedEvent: [],
 }
 
 export const eventsSlice = createSlice({
@@ -28,11 +29,14 @@ export const eventsSlice = createSlice({
         },
         deleteItemCart: (state, action) => {
             state.cart = action.payload
+        },
+        addSelectedEvent: (state, action) => {
+            state.selectedEvent = action.payload
         }
     },
 })
 
 
-export const {addEvents, addLeagues, addItemCart, deleteItemCart} = eventsSlice.actions
+export const {addEvents, addLeagues, addItemCart, deleteItemCart, addSelectedEvent} = eventsSlice.actions
 
 export default eventsSlice.reducer

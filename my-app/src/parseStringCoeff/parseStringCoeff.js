@@ -51,7 +51,7 @@ export const parseGroupMarkets = (obj) => {
         acc[key] = arr;
         return acc;
     }, {});
-    console.log(marketsObj)
+    // console.log(marketsObj)
     // console.log(obj)
     return marketsObj;
 }

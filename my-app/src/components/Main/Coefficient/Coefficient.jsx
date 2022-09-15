@@ -1,9 +1,10 @@
 import classes from "../../betCart/ButtonCoeff/ButtonCoeff.module.css";
 import {addItemCart, deleteItemCart} from "../../../redux/eventsSlice";
 import {useDispatch, useSelector} from "react-redux";
+import {MARKETS} from "../../../marketsObject/markets";
 
 
-export const Coefficient = ({value, item, type, outcomeId}) => {
+export const Coefficient = ({value, item, type, outcomeId, market}) => {
     const dispatch = useDispatch();
     const cartData = useSelector((state) => state.sports.cart)
 
@@ -14,6 +15,7 @@ export const Coefficient = ({value, item, type, outcomeId}) => {
 
         if (index === -1) {
             dispatch(addItemCart({
+                coeffTitle: MARKETS[market.type].title,
                 id: outcomeId,
                 participants: item.data.name,
                 coeff: e.target.innerHTML,
@@ -21,7 +23,6 @@ export const Coefficient = ({value, item, type, outcomeId}) => {
                 draw: 'Draw',
                 away: item.data.participants.away,
                 outcomesType: type,
-                isActive: true
             }))
         } else {
             inCart.splice(index, 1)

@@ -9,7 +9,10 @@ const BetContainer = () => {
 
     return (
         <div className={classes.BetContainer}>
-            {cartData.length ? <BetHeader cartData={cartData}/> :null}
+            <BetHeader cartData={cartData}/>
+            {!cartData.length ? <div className={classes.cartFooter}>
+                <div className={classes.cartEmptyMessage}>Click on the odds to start with the bet</div>
+            </div> :null}
             <Cart/>
         </div>
     );

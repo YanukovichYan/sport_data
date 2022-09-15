@@ -14,9 +14,13 @@
     font-size: 11px;
     line-height: 13px;
     color: #fff;
-    width: 50px;
+    width: 48px;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.eventsTitle:nth-child(3) {
+    width: 67px;
 }
 
 .eventsTitle:nth-child(1) {

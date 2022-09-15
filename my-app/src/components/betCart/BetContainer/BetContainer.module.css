@@ -4,3 +4,25 @@
     display: flex;
     flex-direction: column;
 }
+
+.cartFooter {
+    background: #fff;
+    border-radius: 7px;
+    padding: 23px 23px 26px;
+}
+
+.cartEmptyMessage {
+    overflow: hidden;
+    padding: 1.25rem 0.625rem 0.9375rem;
+    color: #727272;
+    text-align: center;
+    font-weight: 400;
+    font-size: .6875rem;
+}
+
+.cartEmptyMessage:after {
+    display: block;
+    margin: 0.9375rem auto 0;
+    width: 4.8125rem;
+    content: url('https://kralbet286.com/build/stylesSrc/themes/web/turkish/kralbet/img/common/empty_cart.png');
+}

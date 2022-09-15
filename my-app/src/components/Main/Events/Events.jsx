@@ -1,10 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import EventsDate from "../EventsDate/EventsDate";
 import classes from "./Events.module.css";
 import dayjs from "dayjs";
 import ButtonCoeff from "../../betCart/ButtonCoeff/ButtonCoeff";
+import EventMarketsContainer from "../EventMarketsContainer/EventMarketsContainer";
+import BetHeader from "../../betCart/BetHeader/BetHeader";
+import {useDispatch, useSelector} from "react-redux";
+import {addEvents, addSelectedEvent} from "../../../redux/eventsSlice";
+import {useNavigate} from "react-router-dom";
+
 
 const Events = ({items}) => {
+
+    const navigate =useNavigate();
+    const dispatch = useDispatch();
+
+    const [marketOpen, setMarketOpen] = useState(false);
+    const [selectedEvent, setSelectedEvent] = useState({});
 
     const eventsByDate = items.reduce((result, event) => {
         const date = dayjs(event.data?.time).format("DD.MM.YYYY");
@@ -20,6 +32,13 @@ const Events = ({items}) => {
         return 0;
     })];
 
+    function eventForMarket (item) {
+        // setMarketOpen(!marketOpen)
+        setSelectedEvent(item)
+        navigate('/eventsMarket')
+        dispatch(addSelectedEvent(item))
+    }
+
     return (
         <div>
             {arrEventsByDate.map(([date, items], index) => {
@@ -33,14 +52,13 @@ const Events = ({items}) => {
                                         <div>{dayjs(item.data.time).format("DD.MM")}</div>
                                         <div>{dayjs(item.data.time).format("HH:mm")}</div>
                                     </div>
-                                    <div className={classes.participants}>
+                                    <div onClick={() => {eventForMarket(item)}} className={classes.participants}>
                                         <div className={classes.participantsName}>{item.data.name}</div>
-                                        <div
-                                            className={classes.participantsLeague}> {item.data.tournament.name}</div>
+                                        <div className={classes.participantsLeague}> {item.data.tournament.name}</div>
                                     </div>
                                     <div className={classes.market}>
                                             <ButtonCoeff item={item}/>
-                                        <div className={classes.other}>+{item.data.emc}</div>
+                                        <div onClick={() => {eventForMarket(item)}} className={classes.other}>+{item.data.emc}</div>
                                     </div>
                                 </div>
                             </div>
