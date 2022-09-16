@@ -3,19 +3,17 @@ import EventsDate from "../EventsDate/EventsDate";
 import classes from "./Events.module.css";
 import dayjs from "dayjs";
 import ButtonCoeff from "../../betCart/ButtonCoeff/ButtonCoeff";
-import EventMarketsContainer from "../EventMarketsContainer/EventMarketsContainer";
-import BetHeader from "../../betCart/BetHeader/BetHeader";
 import {useDispatch, useSelector} from "react-redux";
 import {addEvents, addSelectedEvent} from "../../../redux/eventsSlice";
-import {useNavigate} from "react-router-dom";
+import {NavLink, useLocation, useNavigate, useParams} from "react-router-dom";
 
 
 const Events = ({items}) => {
+    const location = useLocation().pathname;
 
-    const navigate =useNavigate();
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const [marketOpen, setMarketOpen] = useState(false);
     const [selectedEvent, setSelectedEvent] = useState({});
 
     const eventsByDate = items.reduce((result, event) => {
@@ -33,10 +31,10 @@ const Events = ({items}) => {
     })];
 
     function eventForMarket (item) {
-        // setMarketOpen(!marketOpen)
+        // console.log(item.id)
         setSelectedEvent(item)
-        navigate('/eventsMarket')
-        dispatch(addSelectedEvent(item))
+        navigate(`${location}/market/${item.id}`)
+        // dispatch(addSelectedEvent(item))
     }
 
     return (
@@ -52,7 +50,11 @@ const Events = ({items}) => {
                                         <div>{dayjs(item.data.time).format("DD.MM")}</div>
                                         <div>{dayjs(item.data.time).format("HH:mm")}</div>
                                     </div>
-                                    <div onClick={() => {eventForMarket(item)}} className={classes.participants}>
+                                    <div
+                                    // to={`${location}/${item.id}`}
+                                    onClick={() => {eventForMarket(item)}}
+                                    className={classes.participants}
+                                    >
                                         <div className={classes.participantsName}>{item.data.name}</div>
                                         <div className={classes.participantsLeague}> {item.data.tournament.name}</div>
                                     </div>

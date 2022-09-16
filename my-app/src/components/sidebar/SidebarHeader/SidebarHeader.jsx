@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Sport from "../Sport/Sport";
 import classes from "./SidebarHeader.module.css";
 import {useSelector} from "react-redux";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 
 const betting = [
     {
@@ -310,7 +310,6 @@ const betting = [
 
 const SidebarHeader = () => {
 
-
     const [eventBySport, setEventBySport] = useState([])
     const events = useSelector((state) => state.sports.events)
     const sortedSport = [...eventBySport.sort((a, b) => b[1].length < a[1].length && -1)]
@@ -321,14 +320,11 @@ const SidebarHeader = () => {
             const eventsBySport = events.reduce((object, event) => {
                 if (object[event.data.sport.name]) {
                     object[event.data.sport.name].push(event)
-                    // console.log(events)
                 } else {
                     object[event.data.sport.name] = [event]
                 }
-                // console.log(object)
                 return object
             }, {})
-            // console.log(eventsBySport)
             setEventBySport(Object.entries(eventsBySport))
         }
 
@@ -338,7 +334,7 @@ const SidebarHeader = () => {
         <div className={classes.nav}>
             <div className={classes.navHead}>SPORT BETTING</div>
             {eventBySport?.map(([sport, eventsBySport], index) => {
-                return <Sport sport={sport} amount={eventsBySport.length} key={index} eventsBySport={eventsBySport}/>
+                return <Sport sport={sport} eventBySport={eventBySport} amount={eventsBySport.length} key={index} eventsBySport={eventsBySport}/>
             })}
         </div>
     );

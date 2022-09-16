@@ -1,6 +1,7 @@
 import classes from "./Main.module.css";
 import {useSelector} from "react-redux";
 import Events from "../Events/Events";
+import React from "react";
 
 const Main = () => {
     const arrayCheckbox = useSelector((state) => state.sports.arrayCheckbox)
