@@ -8,7 +8,7 @@ const Sport = ({sport, amount, eventsBySport}) => {
 
     const navigate = useNavigate();
     const params = useParams();
-
+    // console.log("params", params)
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {

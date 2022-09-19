@@ -60,7 +60,7 @@ const Country = ({country, countryAmount, countriesBySport}) => {
             </div>
             {
                 isOpen ? eventByLeagues.map(([league, eventByLeagues], index) => {
-                    return <League league={league} key={index} leaguesAmount={eventByLeagues.length}
+                    return <League country={country} league={league} key={index} leaguesAmount={eventByLeagues.length}
                                    countriesBySport={countriesBySport} eventByLeagues={eventByLeagues}/>
                 }) : null
             }

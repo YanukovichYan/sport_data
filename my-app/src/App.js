@@ -57,6 +57,18 @@ function App() {
                 <Route path="/:sport/:country/:league/*" element={<Main/>}/>
                 <Route path="/:sport/:country/:league/market/:id" element={<EventMarketsContainer/>}/>
             </Routes>
+
+            {/*<Routes>*/}
+            {/*    <Route index element={<SidebarHeader/>}/>*/}
+            {/*    <Route path="/:sport" element={<SidebarHeader/>}/>*/}
+            {/*    <Route path="/:sport/:country" element={<SidebarHeader/>}/>*/}
+            {/*    <Route path="/:sport/:country" element={<SidebarHeader/>}/>*/}
+            {/*/!*</Routes>*!/*/}
+            {/*/!*<Routes>*!/*/}
+            {/*    <Route path="/:sport/:country/empty" element={<EmptyMain/>}/>*/}
+            {/*    /!*<Route path="/:sport/:country/:league/*" element={<Main/>}/>*!/*/}
+            {/*    /!*<Route path="/:sport/:country/:league/market/:id" element={<EventMarketsContainer/>}/>*!/*/}
+            {/*</Routes>*/}
             <BetContainer/>
         </div>
     );
