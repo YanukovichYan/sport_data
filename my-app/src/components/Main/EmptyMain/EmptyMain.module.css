@@ -1,0 +1,36 @@
+.main {
+    width: 60%;
+    margin: 0 10px;
+}
+
+.headerEmptyEvents {
+    padding: 17px 18px;
+    background: #142e3f;
+    border-radius: 7px 7px 0 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: #fff;
+}
+
+.emptyEvents {
+    background: #fff;
+    border-radius: 7px;
+    color: #727272;
+    font-weight: 400;
+    height: 450px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.emptyEvents:after {
+    display: block;
+    margin: 0.9375rem auto 0;
+    content: url('https://zonasporta.by/images/promo/promofull.png');
+    padding-right: 17px;
+}

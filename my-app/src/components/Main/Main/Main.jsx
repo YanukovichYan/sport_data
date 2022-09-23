@@ -4,7 +4,9 @@ import Events from "../Events/Events";
 import React from "react";
 
 const Main = () => {
+
     const arrayCheckbox = useSelector((state) => state.sports.arrayCheckbox)
+
     return (
         <div className={classes.main}>
             {arrayCheckbox.map(([league, items], index) => {

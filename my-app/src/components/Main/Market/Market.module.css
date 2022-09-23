@@ -1,0 +1,66 @@
+.marketTitle {
+    background: #e1d18c;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: #fff;
+    height: 35px;
+    text-transform: capitalize;
+    align-items: center;
+    display: flex;
+    padding: 0 12px;
+    justify-content: space-between;
+}
+
+.marketType {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: right;
+    color: #193b52;
+}
+
+.coeffWrapper {
+    flex: 1 0 auto;
+    width: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 7px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #193b52;
+    padding: 0 10px;
+    border: 1px solid transparent;
+    height: 40px;
+    cursor: pointer;
+}
+
+.coeffWrapper:hover .marketType {
+    color: #fff;
+}
+
+.coeffWrapper:hover {
+    background: #e1d18c;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.coeffWrapper + .coeffWrapper {
+    margin-left: 10px;
+}
+
+.inCart {
+    background: #e1d18c;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.activeMarketType {
+    color: #fff;
+}

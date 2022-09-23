@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import EventsDate from "../EventsDate/EventsDate";
 import classes from "./Events.module.css";
 import dayjs from "dayjs";
@@ -10,9 +10,7 @@ import {NavLink, useLocation, useNavigate, useParams} from "react-router-dom";
 
 const Events = ({items}) => {
     const location = useLocation().pathname;
-
     const navigate = useNavigate();
-    const dispatch = useDispatch();
 
     const [selectedEvent, setSelectedEvent] = useState({});
 
@@ -31,10 +29,8 @@ const Events = ({items}) => {
     })];
 
     function eventForMarket (item) {
-        // console.log(item.id)
         setSelectedEvent(item)
         navigate(`${location}/market/${item.id}`)
-        // dispatch(addSelectedEvent(item))
     }
 
     return (
@@ -51,7 +47,6 @@ const Events = ({items}) => {
                                         <div>{dayjs(item.data.time).format("HH:mm")}</div>
                                     </div>
                                     <div
-                                    // to={`${location}/${item.id}`}
                                     onClick={() => {eventForMarket(item)}}
                                     className={classes.participants}
                                     >
